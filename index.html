@@ -33,7 +33,6 @@
         body { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        /* Scrollbar Hide */
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -76,13 +75,18 @@
             
             <!-- Action Buttons -->
             <div class="flex items-center gap-5">
+                <!-- Theme Toggle -->
                 <button onclick="toggleTheme()" class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-yellow-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
                     <i class="fas fa-sun hidden dark:block"></i>
                     <i class="fas fa-moon block dark:hidden"></i>
                 </button>
+
+                <!-- LinkedIn Icon -->
                 <a href="https://linkedin.com/in/BobFox777" target="_blank" class="text-[#0077b5] dark:text-[#4cb5f5] hover:scale-110 transition-transform">
                     <i class="fab fa-linkedin text-4xl"></i>
                 </a>
+
+                <!-- Email Button -->
                 <a href="mailto:BobFox777@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-xl text-sm font-bold hover:bg-blue-600 dark:hover:bg-blue-100 transition shadow-md">
                     <i class="far fa-envelope"></i> Email
                 </a>
@@ -95,7 +99,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 
-                <!-- Main Intro -->
+                <!-- BOX 1: Main Intro -->
                 <div class="md:col-span-8 bg-slate-900 dark:bg-slate-850 text-white rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl group border border-transparent dark:border-slate-800">
                     <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-600/30 transition duration-1000"></div>
                     <div class="relative z-10 h-full flex flex-col justify-center">
@@ -105,11 +109,10 @@
                         </h2>
                         
                         <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
-                            <!-- CORRECTED TEXT -->
                             <p class="font-medium text-white text-xl">
-                                I’m a data-driven <strong>Casino & Poker Product Manager</strong>. I combine a passion for player experience with operational precision to build products that perform.
+                                I'm a data-driven <strong>Casino & Poker Product Manager</strong>. I have a passion for player experience, a vision for product, and I strive for operational excellence.
                             </p>
-
+                            
                             <div class="flex items-center gap-3 text-slate-400 text-base border-l-4 border-blue-500 pl-4">
                                 <i class="fas fa-arrow-down animate-bounce text-blue-400"></i>
                                 Scroll down to see details of tasks for my roles and flagship achievements / projects.
@@ -118,31 +121,55 @@
                     </div>
                 </div>
 
-                <!-- Core Stack -->
+                <!-- BOX 2: Skills & Contact -->
                 <div class="md:col-span-4 bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-200 dark:border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden transition-colors duration-300">
                     <div>
                         <h3 class="text-slate-400 dark:text-slate-500 uppercase tracking-widest text-xs font-bold mb-4">Core Stack</h3>
                         <div class="flex flex-wrap gap-2">
+                            <!-- Product Mgmt (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Product Management</span>
+                            
+                            <!-- Gaming Ops (Emerald) -->
                             <span class="px-3 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800/50 rounded-lg text-xs md:text-sm font-bold">Gaming Operations</span>
+                            
+                            <!-- Excel (Emerald) -->
                             <span class="px-3 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800/50 rounded-lg text-xs md:text-sm font-bold">Excel Models</span>
+                            
+                            <!-- BI (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">BI</span>
+
+                            <!-- AI Automation (Fuchsia) -->
                             <span class="px-3 py-2 bg-fuchsia-50 dark:bg-fuchsia-900/30 text-fuchsia-700 dark:text-fuchsia-300 border border-fuchsia-100 dark:border-fuchsia-800/50 rounded-lg text-xs md:text-sm font-bold">AI Automation</span>
+
+                            <!-- IMS (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">IMS</span>
+
+                            <!-- CMS (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">CMS</span>
+
+                            <!-- Supplier (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Supplier Relations</span>
+
+                            <!-- Compliance (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Compliance</span>
+
+                            <!-- Promotions (Rose) -->
                             <span class="px-3 py-2 bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 border border-rose-100 dark:border-rose-800/50 rounded-lg text-xs md:text-sm font-bold">Promotions</span>
                         </div>
                     </div>
                     
                     <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-3">
+                        <!-- 1. Email -->
                         <a href="mailto:BobFox777@gmail.com" class="flex items-center justify-center gap-2 w-full bg-slate-900 dark:bg-white hover:bg-blue-600 dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold py-3 rounded-xl transition duration-300 shadow-md">
                             <i class="far fa-envelope"></i> Email
                         </a>
+                        
+                        <!-- 2. LinkedIn -->
                         <a href="https://linkedin.com/in/BobFox777" target="_blank" class="flex items-center justify-center gap-2 w-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-[#0077b5] dark:text-[#4cb5f5] font-bold py-3 rounded-xl transition duration-300">
                             <i class="fab fa-linkedin text-xl"></i> LinkedIn
                         </a>
+
+                        <!-- 3. Download Resume -->
                         <a href="BobFox_CV.pdf" download class="flex items-center justify-center gap-2 w-full bg-white dark:bg-transparent border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 font-bold py-3 rounded-xl transition duration-300">
                             <i class="fas fa-file-pdf text-red-500 text-lg"></i> Download Resume
                         </a>
@@ -161,7 +188,6 @@
         <section class="w-full bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900 transition-colors duration-300">
             <div class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
-                <!-- Sidebar -->
                 <div class="lg:col-span-4">
                     <div class="sticky top-24"> 
                         <div class="flex items-center gap-2 mb-3">
@@ -169,9 +195,8 @@
                             <span class="text-blue-600 dark:text-blue-400 font-bold text-sm uppercase tracking-wide">04/2024 - Present</span>
                         </div>
                         <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-2">Casino Product Manager</h2>
-                        <div class="mb-6">
-                            <img src="digitalbeat.png" alt="Digital Beat" class="h-8 w-auto object-contain object-left" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-xl text-slate-500 font-medium\'>Digital Beat</div>'">
-                        </div>
+                        <!-- LOGO -->
+                        <div class="mb-6"><img src="digitalbeat.png" alt="Digital Beat" class="h-8 w-auto object-contain object-left" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'text-xl text-slate-500 font-medium\'>Digital Beat</div>'"></div>
                         
                         <div class="bg-slate-50 dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
                             <ul class="space-y-4 text-slate-700 dark:text-slate-300 font-medium leading-relaxed text-sm">
@@ -229,7 +254,7 @@
                     </article>
 
                     <!-- PROJECT 2: WORKFLOW AUTOMATION -->
-                    <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl hover:border-fuchsia-400 dark:hover:border-fuchsia-500 transition duration-300 overflow-hidden">
+                    <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition duration-300 overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         <div class="absolute top-6 right-6 bg-fuchsia-50 dark:bg-fuchsia-900/30 text-fuchsia-600 dark:text-fuchsia-300 text-xs font-bold px-3 py-1 rounded-full border border-fuchsia-100 dark:border-fuchsia-800">🚀 Key Initiative</div>
                         <div class="p-8 pb-4 relative z-10">
@@ -242,14 +267,8 @@
                         </div>
                         
                         <div class="bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 p-6 pt-4 relative z-10">
-                            <div class="flex items-center justify-between mb-3 px-1">
-                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Internal Tools Suite</div>
-                                <button onclick="manualScroll('wf-carousel')" class="text-xs text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition cursor-pointer flex items-center">
-                                    <i class="fas fa-arrow-right mr-1"></i> Scroll to view
-                                </button>
-                            </div>
-                            <div id="wf-carousel" class="flex flex-nowrap gap-4 overflow-x-auto pb-4 snap-x snap-mandatory px-1 scrollbar-hide hover:cursor-grab">
-                                <!-- Card 1 -->
+                            <div class="flex items-center justify-between mb-3 px-1"><div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Internal Tools Suite</div><div class="text-xs text-slate-400"><i class="fas fa-arrow-right mr-1"></i> Scroll to view</div></div>
+                            <div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory px-1 scrollbar-hide">
                                 <div class="snap-center shrink-0 w-[85%] md:w-[400px] flex-none bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden relative group/card hover:-translate-y-1 transition duration-300">
                                     <div class="h-80 bg-fuchsia-50 dark:bg-fuchsia-900/20 relative flex items-center justify-center overflow-hidden group cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                                         <img src="app1.png" class="w-full h-full object-cover transition duration-300 group-hover:brightness-110" onerror="this.style.display='none'">
@@ -259,7 +278,6 @@
                                         <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">Batch creates games with multiple tile formats. Automatically enriches data with Theme, Features, Provider, Volatility, and RTP.</div>
                                     </div>
                                 </div>
-                                <!-- Card 2 -->
                                 <div class="snap-center shrink-0 w-[85%] md:w-[400px] flex-none bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden relative group/card hover:-translate-y-1 transition duration-300">
                                     <div class="h-80 bg-indigo-50 dark:bg-indigo-900/20 relative flex items-center justify-center overflow-hidden group cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                                         <img src="app2.png" class="w-full h-full object-cover transition duration-300 group-hover:brightness-110" onerror="this.style.display='none'">
@@ -269,7 +287,6 @@
                                         <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">Automatically renames batches of game tiles to match game codes. Replaces a previously manual task, handling resizing and organization instantly.</div>
                                     </div>
                                 </div>
-                                <!-- Card 3 -->
                                 <div class="snap-center shrink-0 w-[85%] md:w-[400px] flex-none bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden relative group/card hover:-translate-y-1 transition duration-300">
                                     <div class="h-80 bg-blue-50 dark:bg-blue-900/20 relative flex items-center justify-center overflow-hidden group cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                                         <img src="app3.png" class="w-full h-full object-cover transition duration-300 group-hover:brightness-110" onerror="this.style.display='none'">
@@ -279,22 +296,12 @@
                                         <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">Automatically extracts certificate and game data for regulatory logs. Replaces a manual process that took 4 hours each week to complete.</div>
                                     </div>
                                 </div>
-                                <!-- Card 4 -->
-                                <div class="snap-center shrink-0 w-[85%] md:w-[400px] flex-none bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden relative group/card hover:-translate-y-1 transition duration-300">
-                                    <div class="h-80 bg-teal-50 dark:bg-teal-900/20 relative flex items-center justify-center overflow-hidden group cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
-                                        <img src="extension.webp" class="w-full h-full object-cover object-top transition duration-300 group-hover:brightness-110" onerror="this.style.display='none'">
-                                    </div>
-                                    <div class="p-4 border-t border-slate-100 dark:border-slate-800">
-                                        <div class="font-bold text-slate-800 dark:text-slate-200 text-sm">Portal Game Updater</div>
-                                        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">Created browser extension to mass update games.</div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </article>
 
                     <!-- PROJECT 3: EXCEL -->
-                    <article class="group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg p-8 hover:shadow-2xl hover:border-emerald-400 dark:hover:border-emerald-800 transition duration-300 relative overflow-hidden">
+                    <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg p-8 hover:shadow-2xl hover:border-emerald-400 dark:hover:border-emerald-500 transition duration-300 overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         <div class="flex items-center gap-3 mb-4 relative z-10">
                             <div class="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-lg shadow-inner"><i class="fas fa-file-excel"></i></div>
@@ -306,7 +313,7 @@
             </div>
         </section>
 
-        <!-- === ROLE 2: POKER PM === -->
+        <!-- === ROLE 2: POKER PM (Grey/Dark Alt) === -->
         <section class="w-full bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-800">
             <div class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-4">
@@ -326,6 +333,7 @@
                 </div>
 
                 <div class="lg:col-span-8 space-y-16">
+                    <!-- Holland Casino Carousel -->
                     <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden hover:shadow-xl hover:border-orange-400 dark:hover:border-orange-500 transition duration-500">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         <div class="p-8 pb-4 relative z-10">
@@ -346,6 +354,7 @@
                         </div>
                     </article>
 
+                    <!-- Dutch Championship -->
                     <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-yellow-400 dark:hover:border-yellow-500 transition p-8 overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         <div class="flex items-center justify-between mb-3 relative z-10">
@@ -353,6 +362,7 @@
                                 <div class="w-10 h-10 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center text-yellow-600 dark:text-yellow-400 text-lg"><i class="fas fa-trophy"></i></div>
                                 <h3 class="text-xl font-bold text-slate-800 dark:text-white">€100,000 Dutch Championship of Online Poker</h3>
                             </div>
+                            <span class="px-3 py-1 bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-xs font-bold uppercase tracking-wide border border-yellow-100 dark:border-yellow-800 whitespace-nowrap">Promotion</span>
                         </div>
                         <p class="text-sm text-slate-600 dark:text-slate-400 mb-0 leading-relaxed relative z-10">Devised and managed this flagship promotion, working closely with multiple internal and external teams to organize the event. The tournaments were a major success, with guaranteed prize pools covered and increase in KPIs.</p>
                     </article>
@@ -369,7 +379,7 @@
             </div>
         </section>
 
-        <!-- === ROLE 3: BETSSON === -->
+        <!-- === ROLE 3: BETSSON (White) === -->
         <section class="w-full bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900">
             <div class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-4">
@@ -388,7 +398,7 @@
                     </div>
                 </div>
                 <div class="lg:col-span-8 space-y-16">
-                    <article class="group bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-xl transition duration-500 hover:border-rose-400 dark:hover:border-rose-500 overflow-hidden">
+                    <article class="relative group bg-slate-50 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-xl transition duration-500 hover:border-rose-400 dark:hover:border-rose-500 overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-rose-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         <div class="flex items-center justify-between mb-4 relative z-10">
                             <div class="flex items-center gap-3">
@@ -402,7 +412,7 @@
                         </p>
                     </article>
 
-                    <article class="group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-md hover:border-amber-400 dark:hover:border-amber-500 transition overflow-hidden">
+                    <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-md hover:border-amber-400 dark:hover:border-amber-500 transition overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         <div class="flex items-center gap-3 mb-3 relative z-10">
                             <div class="w-10 h-10 bg-amber-100 dark:bg-amber-900/30 rounded-lg flex items-center justify-center text-amber-600 dark:text-amber-400 text-lg"><i class="fas fa-bullhorn"></i></div>
@@ -416,7 +426,7 @@
             </div>
         </section>
 
-        <!-- === ROLE 4: PLAYTECH === -->
+        <!-- === ROLE 4: PLAYTECH (Grey/Dark Alt) === -->
         <section class="w-full bg-slate-50 dark:bg-slate-900/50 border-t border-slate-100 dark:border-slate-900 pb-32">
             <div class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-4">
@@ -433,14 +443,14 @@
                     </div>
                 </div>
                 <div class="lg:col-span-8 space-y-16">
-                    <article class="group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-xl hover:border-blue-400 dark:hover:border-blue-500 transition duration-500 overflow-hidden">
+                    <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 shadow-sm hover:shadow-xl hover:border-blue-400 dark:hover:border-blue-500 transition duration-500 overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
                         <div class="flex items-center justify-between mb-4 relative z-10">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400 text-lg"><i class="fas fa-network-wired"></i></div>
                                 <h3 class="text-xl font-bold text-slate-800 dark:text-white">Network Promotion Ecosystem</h3>
                             </div>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wide border border-blue-200">Retention Strategy</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold uppercase tracking-wide border border-blue-200">Promotions</span>
                         </div>
                         <p class="text-sm text-slate-600 dark:text-slate-400 mb-4 leading-relaxed relative z-10">
                             Devised major network-wide promotions and tournament series. Partnered closely with product teams to specify, develop, and roll out key platform features to the global network.
@@ -459,45 +469,17 @@
         function openModal(src) { const m=document.getElementById('imageModal'), i=document.getElementById('modalImg'); i.src=src; m.classList.remove('hidden'); }
         function closeModal() { document.getElementById('imageModal').classList.add('hidden'); }
         document.addEventListener('keydown', e => { if(e.key==="Escape") closeModal(); });
-        
         function updateClock() {
             const d=new Date(), h=String(d.getHours()).padStart(2,'0'), m=String(d.getMinutes()).padStart(2,'0');
             const el=document.getElementById('phone-clock'); if(el) el.innerText=`${h}:${m}`;
         }
         setInterval(updateClock,1000); updateClock();
-        
-        function manualScroll(id) {
-            const c = document.getElementById(id);
-            if(c) c.scrollBy({left: 300, behavior: 'smooth'});
-        }
-
         const ps=document.getElementById('ns-screen'); let as=1.0, ui=false, si;
         function sps(){ if(si) clearInterval(si); si=setInterval(()=>{ if(!ui&&ps){ ps.scrollTop+=as; if(ps.scrollTop+ps.clientHeight>=ps.scrollHeight-1) ps.scrollTop=0; } },20); }
         if(ps){ ps.onmouseenter=()=>{ui=true}; ps.ontouchstart=()=>{ui=true}; ps.onmouseleave=()=>{ui=false}; ps.ontouchend=()=>{setTimeout(()=>{ui=false},1000)}; sps(); }
-        
-        function initCarousel(id) {
-            const c = document.getElementById(id);
-            let interval;
-            let hovering = false;
-            if(!c) return;
-            const start = () => {
-                interval = setInterval(() => {
-                    if (!hovering) {
-                        const scroll = c.offsetWidth;
-                        const max = c.scrollWidth - c.clientWidth;
-                        if (c.scrollLeft >= max - 10) c.scrollTo({left: 0, behavior: 'smooth'});
-                        else c.scrollBy({left: scroll, behavior: 'smooth'});
-                    }
-                }, 3000);
-            };
-            c.onmouseenter = () => hovering = true;
-            c.onmouseleave = () => hovering = false;
-            start();
-        }
-
-        initCarousel('hc-carousel');
-        initCarousel('wf-carousel');
-
+        const c=document.getElementById('hc-carousel'); let ci, h=false;
+        function sac(){ ci=setInterval(()=>{ if(!h&&c){ const s=c.offsetWidth, m=c.scrollWidth-c.clientWidth; if(c.scrollLeft>=m-10) c.scrollTo({left:0,behavior:'smooth'}); else c.scrollBy({left:s,behavior:'smooth'}); } },3000); }
+        if(c){ c.onmouseenter=()=>{h=true}; c.onmouseleave=()=>{h=false}; sac(); }
         function toggleTheme(){ document.documentElement.classList.toggle('dark'); }
     </script>
 </body>
