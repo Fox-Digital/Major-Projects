@@ -33,7 +33,6 @@
         body { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        /* Scrollbar Hide */
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -54,8 +53,7 @@
         }
     </style>
 </head>
-<!-- ADDED overflow-x-hidden HERE TO FIX SCROLL ISSUE -->
-<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-900 dark:selection:text-blue-100 overflow-x-hidden">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-900 dark:selection:text-blue-100">
 
     <!-- ==================== IMAGE MODAL ==================== -->
     <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300" onclick="closeModal()">
@@ -94,7 +92,7 @@
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
                 
-                <!-- Main Intro -->
+                <!-- BOX 1: Main Intro -->
                 <div class="md:col-span-8 bg-slate-900 dark:bg-slate-850 text-white rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl group border border-transparent dark:border-slate-800">
                     <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-blue-600/30 transition duration-1000"></div>
                     <div class="relative z-10 h-full flex flex-col justify-center">
@@ -104,12 +102,13 @@
                         </h2>
                         
                         <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
+                            <!-- TEXT UPDATED HERE -->
                             <p class="font-medium text-white text-xl">
-                                I'm a data-driven <strong>Casino & Poker Product Manager</strong>. I have a passion for player experience, a vision for product, and I strive for operational excellence.
+                                I’m a data-driven <strong>Casino & Poker Product Manager</strong>. I combine a passion for player experience with operational precision to build products that perform.
                             </p>
                             
                             <div class="text-sm text-slate-300/80 italic pl-1">
-                                <span class="font-bold text-fuchsia-400 not-italic mr-1">Non-AI Text:</span> I use AI to automate workflows and to create this website. I excel at product and operations, I have an eye for detail and a strong work ethic.
+                                <span class="font-bold text-fuchsia-400 not-italic mr-1">Non-AI Text:</span> I use AI to automate workflows and to create bespoke apps.
                             </div>
 
                             <div class="flex items-center gap-3 text-slate-400 text-base border-l-4 border-blue-500 pl-4">
@@ -120,54 +119,32 @@
                     </div>
                 </div>
 
-                <!-- Core Stack -->
+                <!-- BOX 2: Skills & Contact -->
                 <div class="md:col-span-4 bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-200 dark:border-slate-800 shadow-xl flex flex-col justify-between relative overflow-hidden transition-colors duration-300">
                     <div>
                         <h3 class="text-slate-400 dark:text-slate-500 uppercase tracking-widest text-xs font-bold mb-4">Core Stack</h3>
                         <div class="flex flex-wrap gap-2">
-                            <!-- 1. Product Mgmt (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Product Management</span>
-                            
-                            <!-- 2. Gaming Ops (Emerald) -->
                             <span class="px-3 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800/50 rounded-lg text-xs md:text-sm font-bold">Gaming Operations</span>
-                            
-                            <!-- 3. Excel (Emerald) -->
                             <span class="px-3 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800/50 rounded-lg text-xs md:text-sm font-bold">Excel Models</span>
-                            
-                            <!-- 4. BI (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">BI</span>
-
-                            <!-- 5. AI Automation (Fuchsia) -->
                             <span class="px-3 py-2 bg-fuchsia-50 dark:bg-fuchsia-900/30 text-fuchsia-700 dark:text-fuchsia-300 border border-fuchsia-100 dark:border-fuchsia-800/50 rounded-lg text-xs md:text-sm font-bold">AI Automation</span>
-
-                            <!-- 6. IMS (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">IMS</span>
-
-                            <!-- 7. CMS (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">CMS</span>
-
-                            <!-- 8. Supplier (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Supplier Relations</span>
-
-                            <!-- 9. Compliance (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Compliance</span>
-
-                            <!-- 10. Marketing (Rose) -->
                             <span class="px-3 py-2 bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 border border-rose-100 dark:border-rose-800/50 rounded-lg text-xs md:text-sm font-bold">Promotions</span>
                         </div>
                     </div>
                     
-                    <!-- DOWNLOAD BUTTON REMOVED AS REQUESTED -->
                     <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-3">
-                        <!-- 1. Email -->
                         <a href="mailto:BobFox777@gmail.com" class="flex items-center justify-center gap-2 w-full bg-slate-900 dark:bg-white hover:bg-blue-600 dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold py-3 rounded-xl transition duration-300 shadow-md">
                             <i class="far fa-envelope"></i> Email
                         </a>
-                        
-                        <!-- 2. LinkedIn -->
                         <a href="https://linkedin.com/in/BobFox777" target="_blank" class="flex items-center justify-center gap-2 w-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-[#0077b5] dark:text-[#4cb5f5] font-bold py-3 rounded-xl transition duration-300">
                             <i class="fab fa-linkedin text-xl"></i> LinkedIn
                         </a>
+                     
                     </div>
                 </div>
 
@@ -183,7 +160,6 @@
         <section class="w-full bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900 transition-colors duration-300">
             <div class="max-w-6xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
                 
-                <!-- Sidebar -->
                 <div class="lg:col-span-4">
                     <div class="sticky top-24"> 
                         <div class="flex items-center gap-2 mb-3">
@@ -211,12 +187,9 @@
                     
                     <!-- PROJECT 1: NORTHSTAR -->
                     <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-700 transition duration-500 ring-1 ring-slate-100 dark:ring-slate-800">
-                        
-                        <!-- MOBILE FIX: Badge is relative on small screens, absolute on desktop -->
-                        <div class="relative md:absolute md:top-6 md:right-6 z-20 bg-slate-900 dark:bg-slate-700 text-white text-xs font-bold px-4 py-2 mx-8 mt-8 md:mx-0 md:mt-0 rounded-full shadow-lg inline-flex items-center gap-2 w-fit">
+                        <div class="absolute top-6 right-6 z-20 bg-slate-900 dark:bg-slate-700 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                             <i class="fas fa-trophy text-yellow-400"></i> Signature Achievement
                         </div>
-                        
                         <div class="p-8 pb-0">
                             <div class="flex items-center justify-between mb-3">
                                 <div class="flex items-center gap-3">
@@ -256,10 +229,7 @@
                     <!-- PROJECT 2: WORKFLOW AUTOMATION -->
                     <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl hover:border-fuchsia-400 dark:hover:border-fuchsia-500 transition duration-300 overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
-                        
-                        <!-- Mobile Relative / Desktop Absolute -->
-                        <div class="relative md:absolute md:top-6 md:right-6 bg-fuchsia-50 dark:bg-fuchsia-900/30 text-fuchsia-600 dark:text-fuchsia-300 text-xs font-bold px-3 py-1 rounded-full border border-fuchsia-100 dark:border-fuchsia-800 w-fit mx-8 mt-8 md:mx-0 md:mt-0">🚀 Key Initiative</div>
-                        
+                        <div class="absolute top-6 right-6 bg-fuchsia-50 dark:bg-fuchsia-900/30 text-fuchsia-600 dark:text-fuchsia-300 text-xs font-bold px-3 py-1 rounded-full border border-fuchsia-100 dark:border-fuchsia-800">🚀 Key Initiative</div>
                         <div class="p-8 pb-4 relative z-10">
                             <div class="flex items-center gap-3 mb-4">
                                 <div class="w-10 h-10 bg-fuchsia-100 dark:bg-fuchsia-900/30 rounded-lg flex items-center justify-center text-fuchsia-500 dark:text-fuchsia-400 text-lg"><i class="fas fa-wand-magic-sparkles"></i></div>
@@ -270,8 +240,13 @@
                         </div>
                         
                         <div class="bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 p-6 pt-4 relative z-10">
-                            <div class="flex items-center justify-between mb-3 px-1"><div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Internal Tools Suite</div><div class="text-xs text-slate-400"><i class="fas fa-arrow-right mr-1"></i> Scroll to view</div></div>
-                            <div class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory px-1 scrollbar-hide">
+                            <div class="flex items-center justify-between mb-3 px-1">
+                                <div class="text-xs font-bold text-slate-400 uppercase tracking-wider">Internal Tools Suite</div>
+                                <!-- SCROLL CLICKABLE BUTTON -->
+                                <button onclick="document.getElementById('tool-carousel').scrollBy({left: 400, behavior: 'smooth'})" class="text-xs text-slate-400 hover:text-blue-400 transition-colors cursor-pointer focus:outline-none"><i class="fas fa-arrow-right mr-1"></i> Scroll to view</button>
+                            </div>
+                            <!-- Added ID 'tool-carousel' -->
+                            <div id="tool-carousel" class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory px-1 scrollbar-hide">
                                 <div class="snap-center shrink-0 w-[85%] md:w-[400px] flex-none bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden relative group/card hover:-translate-y-1 transition duration-300">
                                     <div class="h-80 bg-fuchsia-50 dark:bg-fuchsia-900/20 relative flex items-center justify-center overflow-hidden group cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                                         <img src="app1.png" class="w-full h-full object-cover transition duration-300 group-hover:brightness-110" onerror="this.style.display='none'">
