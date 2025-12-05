@@ -469,72 +469,166 @@
     <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
         <div class="max-w-4xl mx-auto text-center px-6"><div class="flex flex-col md:flex-row justify-between items-center text-sm opacity-60"><p>&copy; 2025 Bob Fox. All rights reserved.</p></div></div>
     </footer>
+<script>
+    /* ==================================================================
+       1. PHONE MOCKUP: DRAG-TO-SCROLL & AUTO-SCROLL LOGIC
+       Handles manual dragging and automatic vertical scrolling
+       ================================================================== */
+    const phoneScreen = document.getElementById('ns-screen');
+    let phoneAutoScrollSpeed = 1.0; // Speed of auto-scroll
+    let isPhoneInteracting = false; // Global flag to pause auto-scroll
+    let phoneScrollInterval;
+    
+    // --- A. DRAG LOGIC ---
+    let isDown = false;
+    let startY;
+    let scrollTop;
 
-    <script>
-        /* GRAB-TO-SCROLL LOGIC */
-        const slider = document.getElementById('ns-screen');
-        let isDown = false;
-        let startY;
-        let scrollTop;
+    if (phoneScreen) {
+        phoneScreen.addEventListener('mousedown', (e) => {
+            isDown = true;
+            isPhoneInteracting = true; // Pause auto-scroll
+            phoneScreen.classList.add('cursor-grabbing');
+            phoneScreen.classList.remove('cursor-grab');
+            startY = e.pageY - phoneScreen.offsetTop;
+            scrollTop = phoneScreen.scrollTop;
+        });
 
-        if (slider) {
-            slider.addEventListener('mousedown', (e) => {
-                isDown = true;
-                slider.classList.add('cursor-grabbing');
-                slider.classList.remove('cursor-grab');
-                startY = e.pageY - slider.offsetTop;
-                scrollTop = slider.scrollTop;
-                
-                // Pause auto-scroll
-                if (typeof ui !== 'undefined') ui = true; 
-            });
+        phoneScreen.addEventListener('mouseleave', () => {
+            isDown = false;
+            isPhoneInteracting = false; // Resume auto-scroll
+            phoneScreen.classList.remove('cursor-grabbing');
+            phoneScreen.classList.add('cursor-grab');
+        });
 
-            slider.addEventListener('mouseleave', () => {
-                isDown = false;
-                slider.classList.remove('cursor-grabbing');
-                slider.classList.add('cursor-grab');
-                if (typeof ui !== 'undefined') ui = false;
-            });
+        phoneScreen.addEventListener('mouseup', () => {
+            isDown = false;
+            isPhoneInteracting = false; // Resume auto-scroll
+            phoneScreen.classList.remove('cursor-grabbing');
+            phoneScreen.classList.add('cursor-grab');
+        });
 
-            slider.addEventListener('mouseup', () => {
-                isDown = false;
-                slider.classList.remove('cursor-grabbing');
-                slider.classList.add('cursor-grab');
-                if (typeof ui !== 'undefined') ui = false;
-            });
+        phoneScreen.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const y = e.pageY - phoneScreen.offsetTop;
+            const walk = (y - startY) * 2; // *2 for faster drag sensation
+            phoneScreen.scrollTop = scrollTop - walk;
+        });
 
-            slider.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const y = e.pageY - slider.offsetTop;
-                const walk = (y - startY) * 2; 
-                slider.scrollTop = scrollTop - walk;
-            });
-            
-            slider.addEventListener('touchstart', () => { if (typeof ui !== 'undefined') ui = true; });
-            slider.addEventListener('touchend', () => { 
-                setTimeout(() => { if (typeof ui !== 'undefined') ui = false; }, 1000); 
-            });
-        }
+        // Touch support (Mobile)
+        phoneScreen.addEventListener('touchstart', () => { isPhoneInteracting = true; });
+        phoneScreen.addEventListener('touchend', () => { 
+            setTimeout(() => { isPhoneInteracting = false; }, 1000); 
+        });
+    }
 
-        function openModal(src) { const m=document.getElementById('imageModal'), i=document.getElementById('modalImg'); i.src=src; m.classList.remove('hidden'); }
-        function closeModal() { document.getElementById('imageModal').classList.add('hidden'); }
-        document.addEventListener('keydown', e => { if(e.key==="Escape") closeModal(); });
+    // --- B. AUTO-SCROLL LOGIC ---
+    function startPhoneAutoScroll() {
+        if(phoneScrollInterval) clearInterval(phoneScrollInterval);
         
-        function updateClock() {
-            const d=new Date(), h=String(d.getHours()).padStart(2,'0'), m=String(d.getMinutes()).padStart(2,'0');
-            const el=document.getElementById('phone-clock'); if(el) el.innerText=`${h}:${m}`;
-        }
-        setInterval(updateClock,1000); updateClock(); 
+        phoneScrollInterval = setInterval(() => {
+            // Only scroll if user is NOT hovering, NOT dragging, and element exists
+            if (!isPhoneInteracting && !isDown && phoneScreen) {
+                phoneScreen.scrollTop += phoneAutoScrollSpeed;
+                
+                // If reached bottom, loop back to top instantly
+                if (phoneScreen.scrollTop + phoneScreen.clientHeight >= phoneScreen.scrollHeight - 1) {
+                    phoneScreen.scrollTop = 0;
+                }
+            }
+        }, 20); // 50fps
+    }
 
-        const ps=document.getElementById('ns-screen'); let as=1.0, ui=false, si;
-        function sps(){ if(si) clearInterval(si); si=setInterval(()=>{ if(!ui && !isDown && ps){ ps.scrollTop+=as; if(ps.scrollTop+ps.clientHeight>=ps.scrollHeight-1) ps.scrollTop=0; } },20); }
-        if(ps){ ps.onmouseenter=()=>{ui=true}; ps.ontouchstart=()=>{ui=true}; ps.onmouseleave=()=>{ui=false}; ps.ontouchend=()=>{setTimeout(()=>{ui=false},1000)}; sps(); }
+    // Initialize Phone Auto-Scroll
+    if(phoneScreen) {
+        // Pause on simple hover even if not dragging
+        phoneScreen.addEventListener('mouseenter', () => { isPhoneInteracting = true; });
+        startPhoneAutoScroll();
+    }
 
-        const c=document.getElementById('hc-carousel'); let ci, h=false;
-        function sac(){ ci=setInterval(()=>{ if(!h&&c){ const s=c.offsetWidth, m=c.scrollWidth-c.clientWidth; if(c.scrollLeft>=m-10) c.scrollTo({left:0,behavior:'smooth'}); else c.scrollBy({left:s,behavior:'smooth'}); } },3000); }
-        if(c){ c.onmouseenter=()=>{h=true}; c.onmouseleave=()=>{h=false}; sac(); }
-        function toggleTheme(){ document.documentElement.classList.toggle('dark'); }
-    </script>
+
+    /* ==================================================================
+       2. IMAGE MODAL (Popups for Internal Tools)
+       ================================================================== */
+    function openModal(src) { 
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        modalImg.src = src; 
+        modal.classList.remove('hidden'); 
+    }
+
+    function closeModal() { 
+        document.getElementById('imageModal').classList.add('hidden'); 
+    }
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', e => { 
+        if(e.key === "Escape") closeModal(); 
+    });
+
+
+    /* ==================================================================
+       3. DYNAMIC CLOCK (Top left of Phone)
+       ================================================================== */
+    function updateClock() {
+        const d = new Date();
+        const h = String(d.getHours()).padStart(2, '0');
+        const m = String(d.getMinutes()).padStart(2, '0');
+        const el = document.getElementById('phone-clock'); 
+        if(el) el.innerText = `${h}:${m}`;
+    }
+    setInterval(updateClock, 1000); 
+    updateClock(); // Run immediately on load
+
+
+    /* ==================================================================
+       4. INFINITE CAROUSEL ROTATION (Horizontal)
+       Handles 'hc-carousel' (Holland) and 'tool-carousel' (Workflows)
+       ================================================================== */
+    function initInfiniteCarousel(carouselId, scrollSpeed) {
+        const carousel = document.getElementById(carouselId);
+        if (!carousel) return;
+
+        let isHovering = false;
+        
+        // Stop scrolling on interaction
+        carousel.addEventListener('mouseenter', () => isHovering = true);
+        carousel.addEventListener('mouseleave', () => isHovering = false);
+        carousel.addEventListener('touchstart', () => isHovering = true);
+        carousel.addEventListener('touchend', () => setTimeout(() => isHovering = false, 2000));
+
+        setInterval(() => {
+            if (!isHovering) {
+                // Calculate scroll metrics
+                const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+                const cardWidth = carousel.firstElementChild ? carousel.firstElementChild.offsetWidth + 16 : 300; // +16 for gap
+
+                // If at the end, scroll back to start. Else scroll right.
+                if (carousel.scrollLeft >= maxScroll - 10) {
+                    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carousel.scrollBy({ left: cardWidth, behavior: 'smooth' });
+                }
+            }
+        }, scrollSpeed);
+    }
+
+    // Apply to Holland Casino Carousel (3 seconds)
+    initInfiniteCarousel('hc-carousel', 3000);
+
+    // Apply to Internal Tools Carousel (4 seconds - slower for reading)
+    // Note: Ensure your workflow automation carousel div has id="tool-carousel"
+    initInfiniteCarousel('tool-carousel', 4000);
+
+
+    /* ==================================================================
+       5. THEME TOGGLE (Dark/Light Mode)
+       ================================================================== */
+    function toggleTheme() { 
+        document.documentElement.classList.toggle('dark'); 
+    }
+</script>
+
 </body>
 </html>
