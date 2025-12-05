@@ -52,6 +52,10 @@
         .blob-blue {
             background-image: radial-gradient(at 80% 0%, hsla(210, 100%, 60%, 0.15) 0px, transparent 50%);
         }
+
+        /* Grab Cursors */
+        .cursor-grab { cursor: grab; }
+        .cursor-grabbing { cursor: grabbing; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 selection:bg-blue-100 selection:text-blue-900 dark:selection:bg-blue-900 dark:selection:text-blue-100 overflow-x-hidden">
@@ -109,7 +113,9 @@
                                 I’m a data-driven <strong>Casino & Poker Product Manager</strong>. I combine a passion for player experience with operational precision to build products that perform.
                             </p>
                             
-                  
+                            <div class="text-sm text-slate-300/80 italic pl-1">
+                                <span class="font-bold text-fuchsia-400 not-italic mr-1">Non-AI Text:</span> I use AI to automate workflows and to create this website. I excel at product and operations, I have an eye for detail and a strong work ethic.
+                            </div>
 
                             <div class="flex items-center gap-3 text-slate-400 text-base border-l-4 border-blue-500 pl-4">
                                 <i class="fas fa-arrow-down animate-bounce text-blue-400"></i>
@@ -124,49 +130,24 @@
                     <div>
                         <h3 class="text-slate-400 dark:text-slate-500 uppercase tracking-widest text-xs font-bold mb-4">Core Stack</h3>
                         <div class="flex flex-wrap gap-2">
-                            <!-- 1. Product Mgmt (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Product Management</span>
-                            
-                            <!-- 2. Gaming Ops (Emerald) -->
                             <span class="px-3 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800/50 rounded-lg text-xs md:text-sm font-bold">Gaming Operations</span>
-                            
-                            <!-- 3. Excel (Emerald) -->
                             <span class="px-3 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 border border-emerald-100 dark:border-emerald-800/50 rounded-lg text-xs md:text-sm font-bold">Excel Models</span>
-                            
-                            <!-- 4. BI (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">BI</span>
-
-                            <!-- 5. AI Automation (Fuchsia) -->
                             <span class="px-3 py-2 bg-fuchsia-50 dark:bg-fuchsia-900/30 text-fuchsia-700 dark:text-fuchsia-300 border border-fuchsia-100 dark:border-fuchsia-800/50 rounded-lg text-xs md:text-sm font-bold">AI Automation</span>
-
-                            <!-- 6. IMS (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">IMS</span>
-
-                            <!-- 7. CMS (Cyan) -->
                             <span class="px-3 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 border border-cyan-100 dark:border-cyan-800/50 rounded-lg text-xs md:text-sm font-bold">CMS</span>
-
-                            <!-- 8. Supplier (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Supplier Relations</span>
-
-                            <!-- 9. Compliance (Blue) -->
                             <span class="px-3 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border border-blue-100 dark:border-blue-800/50 rounded-lg text-xs md:text-sm font-bold">Compliance</span>
-
-                            <!-- 10. Marketing (Rose) -->
                             <span class="px-3 py-2 bg-rose-50 dark:bg-rose-900/30 text-rose-700 dark:text-rose-300 border border-rose-100 dark:border-rose-800/50 rounded-lg text-xs md:text-sm font-bold">Promotions</span>
                         </div>
                     </div>
                     
+                    <!-- Download Resume Link (Only here) -->
                     <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-3">
-                        <!-- 1. Email -->
-                        <a href="mailto:BobFox777@gmail.com" class="flex items-center justify-center gap-2 w-full bg-slate-900 dark:bg-white hover:bg-blue-600 dark:hover:bg-slate-200 text-white dark:text-slate-900 font-bold py-3 rounded-xl transition duration-300 shadow-md">
-                            <i class="far fa-envelope"></i> Email
+                         <a href="BobFox_CV.pdf" download class="flex items-center justify-center gap-2 w-full bg-white dark:bg-transparent border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 font-bold py-3 rounded-xl transition duration-300">
+                            <i class="fas fa-file-pdf text-red-500 text-lg"></i> Download Resume
                         </a>
-                        
-                        <!-- 2. LinkedIn -->
-                        <a href="https://linkedin.com/in/BobFox777" target="_blank" class="flex items-center justify-center gap-2 w-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-[#0077b5] dark:text-[#4cb5f5] font-bold py-3 rounded-xl transition duration-300">
-                            <i class="fab fa-linkedin text-xl"></i> LinkedIn
-                        </a>
-                     
                     </div>
                 </div>
 
@@ -179,7 +160,6 @@
         <div class="absolute top-0 left-0 w-full h-full blob-blue pointer-events-none opacity-40"></div>
 
         <!-- === ROLE 1: CASINO PM === -->
-        <!-- MODIFIED PADDING: py-12 md:py-24 -->
         <section class="w-full bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900 transition-colors duration-300">
             <div class="max-w-6xl mx-auto px-6 py-12 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
                 
@@ -212,9 +192,9 @@
                     <!-- PROJECT 1: NORTHSTAR -->
                     <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl overflow-hidden hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-700 transition duration-500 ring-1 ring-slate-100 dark:ring-slate-800">
                         
-                        <!-- TITLE & CONTENT (Top) -->
+                        <!-- CONTENT (Top) -->
                         <div class="p-8 pb-0 relative z-10">
-                            <!-- Mobile-Fixed Badge -->
+                            <!-- Badge (Mobile: Relative, Desktop: Absolute) -->
                             <div class="w-fit mb-4 md:mb-0 md:absolute md:top-6 md:right-6 z-20 bg-slate-900 dark:bg-slate-700 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
                                 <i class="fas fa-trophy text-yellow-400"></i> Signature Achievement
                             </div>
@@ -236,7 +216,7 @@
                             </div>
                         </div>
 
-                        <!-- PHONE MOCKUP (Bottom) -->
+                        <!-- PHONE MOCKUP (Bottom) - WITH GRAB LOGIC -->
                         <div class="bg-slate-50 dark:bg-slate-950 py-12 border-t border-slate-100 dark:border-slate-800 relative flex justify-center overflow-hidden">
                             <a href="https://www.northstarbets.ca/casino" target="_blank" class="absolute inset-0 z-0" aria-label="Visit Website"></a>
                             <div class="relative mx-auto border-gray-800 bg-gray-800 border-[8px] rounded-[2rem] h-[560px] w-[260px] shadow-[0_25px_60px_-15px_rgba(0,0,0,0.4)] z-10 transform group-hover:scale-[1.02] transition duration-700 ease-in-out">
@@ -247,8 +227,9 @@
                                         <div class="flex items-center gap-1"><span id="phone-clock" class="text-white text-[10px] font-semibold tracking-wide">--:--</span><i class="fas fa-location-arrow text-[8px] text-white"></i></div>
                                         <div class="flex items-center gap-1.5 text-white"><i class="fas fa-signal text-[9px]"></i><i class="fas fa-wifi text-[9px]"></i><i class="fas fa-battery-half text-[10px]"></i></div>
                                     </div>
-                                    <div id="ns-screen" class="relative flex-1 w-full overflow-y-auto scrollbar-hide rounded-b-[1.5rem] bg-slate-900 cursor-grab">
-                                        <img src="1000004744.webp" class="w-full h-auto block" alt="Mobile Lobby Screenshot" onerror="this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-slate-500 text-xs p-4 text-center\'>Image 1000004744.jpg not found</div>'">
+                                    <!-- ENABLED GRAB -->
+                                    <div id="ns-screen" class="relative flex-1 w-full overflow-y-auto scrollbar-hide rounded-b-[1.5rem] bg-slate-900 cursor-grab select-none">
+                                        <img src="1000004744.jpg" draggable="false" class="w-full h-auto block select-none pointer-events-none" alt="Mobile Lobby Screenshot" onerror="this.parentElement.innerHTML='<div class=\'h-full flex items-center justify-center text-slate-500 text-xs p-4 text-center\'>Image 1000004744.jpg not found</div>'">
                                     </div>
                                 </div>
                             </div>
@@ -259,9 +240,7 @@
                     <!-- PROJECT 2: WORKFLOW AUTOMATION -->
                     <article class="relative group bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl hover:border-fuchsia-200 dark:hover:border-fuchsia-800 transition duration-300 overflow-hidden">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-fuchsia-500/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2"></div>
-                        
                         <div class="p-8 pb-4 relative z-10">
-                            <!-- Mobile Badge Fix -->
                             <div class="w-fit mb-4 md:mb-0 md:absolute md:top-6 md:right-6 bg-fuchsia-50 dark:bg-fuchsia-900/30 text-fuchsia-600 dark:text-fuchsia-300 text-xs font-bold px-3 py-1 rounded-full border border-fuchsia-100 dark:border-fuchsia-800">🚀 Key Initiative</div>
 
                             <div class="flex items-center gap-3 mb-4">
@@ -308,7 +287,7 @@
                                         <div class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">Automatically extracts certificate and game data for regulatory logs. Replaces a manual process that took 4 hours each week to complete.</div>
                                     </div>
                                 </div>
-                                <!-- Card 4 (ADDED) -->
+                                <!-- Card 4 -->
                                 <div class="snap-center shrink-0 w-[85%] md:w-[400px] flex-none bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden relative group/card hover:-translate-y-1 transition duration-300">
                                     <div class="h-80 bg-teal-50 dark:bg-teal-900/20 relative flex items-center justify-center overflow-hidden group cursor-zoom-in" onclick="openModal(this.querySelector('img').src)">
                                         <img src="extension.webp" class="w-full h-full object-cover object-top transition duration-300 group-hover:brightness-110" onerror="this.style.display='none'">
@@ -384,6 +363,7 @@
                                 <div class="w-10 h-10 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center text-yellow-600 dark:text-yellow-400 text-lg"><i class="fas fa-trophy"></i></div>
                                 <h3 class="text-xl font-bold text-slate-800 dark:text-white">€100,000 Dutch Championship of Online Poker</h3>
                             </div>
+                            <span class="px-3 py-1 bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-xs font-bold uppercase tracking-wide border border-yellow-100 dark:border-yellow-800 whitespace-nowrap">Promotion</span>
                         </div>
                         <p class="text-sm text-slate-600 dark:text-slate-400 mb-0 leading-relaxed relative z-10">Devised and managed this flagship promotion, working closely with multiple internal and external teams to organize the event. The tournaments were a major success, with guaranteed prize pools covered and increase in KPIs.</p>
                     </article>
@@ -488,18 +468,64 @@
     </footer>
 
     <script>
+        /* GRAB-TO-SCROLL LOGIC */
+        const slider = document.getElementById('ns-screen');
+        let isDown = false;
+        let startY;
+        let scrollTop;
+
+        if (slider) {
+            slider.addEventListener('mousedown', (e) => {
+                isDown = true;
+                slider.classList.add('cursor-grabbing');
+                slider.classList.remove('cursor-grab');
+                startY = e.pageY - slider.offsetTop;
+                scrollTop = slider.scrollTop;
+                
+                // Pause auto-scroll
+                if (typeof ui !== 'undefined') ui = true; 
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                isDown = false;
+                slider.classList.remove('cursor-grabbing');
+                slider.classList.add('cursor-grab');
+                if (typeof ui !== 'undefined') ui = false;
+            });
+
+            slider.addEventListener('mouseup', () => {
+                isDown = false;
+                slider.classList.remove('cursor-grabbing');
+                slider.classList.add('cursor-grab');
+                if (typeof ui !== 'undefined') ui = false;
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const y = e.pageY - slider.offsetTop;
+                const walk = (y - startY) * 2; 
+                slider.scrollTop = scrollTop - walk;
+            });
+            
+            slider.addEventListener('touchstart', () => { if (typeof ui !== 'undefined') ui = true; });
+            slider.addEventListener('touchend', () => { 
+                setTimeout(() => { if (typeof ui !== 'undefined') ui = false; }, 1000); 
+            });
+        }
+
         function openModal(src) { const m=document.getElementById('imageModal'), i=document.getElementById('modalImg'); i.src=src; m.classList.remove('hidden'); }
         function closeModal() { document.getElementById('imageModal').classList.add('hidden'); }
         document.addEventListener('keydown', e => { if(e.key==="Escape") closeModal(); });
+        
         function updateClock() {
             const d=new Date(), h=String(d.getHours()).padStart(2,'0'), m=String(d.getMinutes()).padStart(2,'0');
             const el=document.getElementById('phone-clock'); if(el) el.innerText=`${h}:${m}`;
         }
         setInterval(updateClock,1000); updateClock(); 
 
-        // SPEED: 1.0
         const ps=document.getElementById('ns-screen'); let as=1.0, ui=false, si;
-        function sps(){ if(si) clearInterval(si); si=setInterval(()=>{ if(!ui&&ps){ ps.scrollTop+=as; if(ps.scrollTop+ps.clientHeight>=ps.scrollHeight-1) ps.scrollTop=0; } },20); }
+        function sps(){ if(si) clearInterval(si); si=setInterval(()=>{ if(!ui && !isDown && ps){ ps.scrollTop+=as; if(ps.scrollTop+ps.clientHeight>=ps.scrollHeight-1) ps.scrollTop=0; } },20); }
         if(ps){ ps.onmouseenter=()=>{ui=true}; ps.ontouchstart=()=>{ui=true}; ps.onmouseleave=()=>{ui=false}; ps.ontouchend=()=>{setTimeout(()=>{ui=false},1000)}; sps(); }
 
         const c=document.getElementById('hc-carousel'); let ci, h=false;
